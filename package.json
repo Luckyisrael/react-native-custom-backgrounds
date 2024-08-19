@@ -181,5 +181,8 @@
   "create-react-native-library": {
     "type": "library",
     "version": "0.40.0"
+  },
+  "dependencies": {
+    "react-native-svg": "^15.5.0"
   }
 }
