@@ -8,8 +8,17 @@ customize your react native apps with beautiful patterns backgrounds
 npm install react-native-custom-backgrounds
 ```
 
-## Usage
+or
 
+```sh
+yarn add react-native-custom-backgrounds
+```
+
+## Documentation
+
+For more detailed documentation, visit [MyReactNativeLibrary Docs](https://github.com/Luckyisrael/react-native-custom-backgrounds.git).
+
+## Usage
 
 ```ts
 import { CustomBackground } from 'react-native-custom-backgrounds';
@@ -29,17 +38,17 @@ import { CustomBackground } from 'react-native-custom-backgrounds';
 
 ```
 
-## Props 
+## Props
 
-| Prop            | Type                        | Required | Description                                                                 |
-|-----------------|-----------------------------|----------|-----------------------------------------------------------------------------|
-| `patternType`   | `PatternType`               | Yes      | The type of pattern to display                                              |
-| `backgroundColor` | `string`                    | Yes      | The background color of the pattern                                         |
-| `foregroundColor` | `string`                    | Yes      | The color of the pattern itself                                             |
-| `opacity`       | `number`                    | No       | The opacity of the pattern (0 to 1, default: 1)                             |
-| `spacing`       | `number`                    | No       | The spacing between pattern elements (default: 20)                          |
-| `gradient`      | `string[]` (2 or 3 values)  | No       | An array of colors to create a gradient background                          |
-| `style`         | `ViewStyle`                 | No       | Additional styles for the container                                         |
+| Prop              | Type                       | Required | Description                                        |
+| ----------------- | -------------------------- | -------- | -------------------------------------------------- |
+| `patternType`     | `PatternType`              | Yes      | The type of pattern to display                     |
+| `backgroundColor` | `string`                   | Yes      | The background color of the pattern                |
+| `foregroundColor` | `string`                   | Yes      | The color of the pattern itself                    |
+| `opacity`         | `number`                   | No       | The opacity of the pattern (0 to 1, default: 1)    |
+| `spacing`         | `number`                   | No       | The spacing between pattern elements (default: 20) |
+| `gradient`        | `string[]` (2 or 3 values) | No       | An array of colors to create a gradient background |
+| `style`           | `ViewStyle`                | No       | Additional styles for the container                |
 
 ## Pattern Types
 
@@ -86,6 +95,7 @@ const MyScreen = () => (
 
 export default MyScreen;
 ```
+
 Using in a custom component
 
 ```ts

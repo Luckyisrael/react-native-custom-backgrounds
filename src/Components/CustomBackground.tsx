@@ -3,8 +3,8 @@ import { View, StyleSheet, type ViewStyle } from 'react-native';
 import {
   type PatternType,
   type PatternBackgroundType,
-} from '../src/Types/PatternTypes';
-import * as PatternFunctions from './Components/PatternFunctions';
+} from '../Types/PatternTypes';
+import * as PatternFunctions from './PatternFunctions';
 
 interface CustomBackgroundProps {
   patternType: PatternType;
@@ -14,7 +14,6 @@ interface CustomBackgroundProps {
   spacing?: number;
   gradient?: [string, string] | [string, string, string];
   style?: ViewStyle;
-  children?: React.ReactNode;
 }
 
 export const CustomBackground: React.FC<CustomBackgroundProps> = ({
@@ -25,7 +24,6 @@ export const CustomBackground: React.FC<CustomBackgroundProps> = ({
   spacing = 20,
   gradient,
   style,
-  children,
 }) => {
   const backgroundOptions: PatternBackgroundType = {
     type: 'pattern',
@@ -44,19 +42,13 @@ export const CustomBackground: React.FC<CustomBackgroundProps> = ({
 
   return (
     <View style={[styles.container, style]}>
-      <View style={styles.patternContainer}>
-        <PatternComponent />
-      </View>
-      {children}
+      <PatternComponent />
     </View>
   );
 };
 
 const styles = StyleSheet.create({
   container: {
-    position: 'relative',
-  },
-  patternContainer: {
     position: 'absolute',
     top: 0,
     left: 0,

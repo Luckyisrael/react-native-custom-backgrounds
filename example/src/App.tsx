@@ -4,7 +4,6 @@ import CustomCard from './component/CustomCard';
 import { CustomBackground } from 'react-native-custom-backgrounds';
 
 const App = () => {
-
   return (
     <SafeAreaView style={styles.container}>
       <CustomBackground
@@ -25,7 +24,6 @@ const App = () => {
             content="This is a custom card with a patterned background."
           />
         </View>
-        
       </CustomBackground>
     </SafeAreaView>
   );

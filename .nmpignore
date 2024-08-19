@@ -1,0 +1,20 @@
+# Test files
+/tests
+/__tests__
+
+# Documentation
+/docs
+*.md
+
+# Config files
+/.eslintrc
+/.prettierrc
+/.babelrc
+
+# Development environment
+/.env
+/.env.local
+
+# Build artifacts
+/dist
+/build
