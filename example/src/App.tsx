@@ -1,11 +1,10 @@
-import React, { useState } from 'react';
 import { View, SafeAreaView, StyleSheet } from 'react-native';
 import CustomButton from './component/CustomButton';
 import CustomCard from './component/CustomCard';
 import { CustomBackground } from 'react-native-custom-backgrounds';
 
 const App = () => {
-  const [alertVisible, setAlertVisible] = useState(false);
+
   return (
     <SafeAreaView style={styles.container}>
       <CustomBackground

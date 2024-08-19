@@ -11,7 +11,7 @@ npm install react-native-custom-backgrounds
 ## Usage
 
 
-```js
+```ts
 import { CustomBackground } from 'react-native-custom-backgrounds';
 
 // ...
@@ -43,8 +43,7 @@ import { CustomBackground } from 'react-native-custom-backgrounds';
 
 ## Pattern Types
 
-PatternType
-The available pattern types are:
+Available pattern types:
 
 'wavy'
 'rhombus'
@@ -60,6 +59,68 @@ The available pattern types are:
 'triangle'
 'cross'
 
+## Examples
+
+Using as a background for your screen
+
+```ts
+import React from 'react';
+import { View, Text } from 'react-native';
+import { CustomBackground } from 'react-native-pattern-background';
+
+const MyScreen = () => (
+  <CustomBackground
+    patternType="dot"
+    backgroundColor="#1A237E"
+    foregroundColor="#FFFFFF"
+    opacity={0.8}
+    spacing={15}
+    gradient={["#1A237E", "#303F9F", "#3F51B5"]}
+    style={{ flex: 1 }}
+  >
+    <View style={{ padding: 20 }}>
+      <Text style={{ color: 'white' }}>Welcome to my app!</Text>
+    </View>
+  </CustomBackground>
+);
+
+export default MyScreen;
+```
+Using in a custom component
+
+```ts
+import React from 'react';
+import { TouchableOpacity, Text, StyleSheet } from 'react-native';
+import { CustomBackground } from 'react-native-pattern-background';
+
+const CustomButton = ({ onPress, title }) => (
+  <TouchableOpacity onPress={onPress} style={styles.button}>
+    <CustomBackground
+      patternType="rhombus"
+      backgroundColor="#FFB74D"
+      foregroundColor="#FF5722"
+      opacity={0.4}
+      spacing={30}
+    >
+      <Text style={styles.text}>{title}</Text>
+    </CustomBackground>
+  </TouchableOpacity>
+);
+
+const styles = StyleSheet.create({
+  button: {
+    borderRadius: 8,
+    overflow: 'hidden',
+  },
+  text: {
+    color: 'white',
+    textAlign: 'center',
+    padding: 10,
+  },
+});
+
+export default CustomButton;
+```
 ## Contributing
 
 See the [contributing guide](CONTRIBUTING.md) to learn how to contribute to the repository and the development workflow.
