@@ -121,6 +121,7 @@ const styles = StyleSheet.create({
 
 export default CustomButton;
 ```
+
 ## Contributing
 
 See the [contributing guide](CONTRIBUTING.md) to learn how to contribute to the repository and the development workflow.
